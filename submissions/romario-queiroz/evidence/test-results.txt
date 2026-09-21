@@ -1,0 +1,14 @@
+Command:
+python -m pytest -q
+
+Result:
+...                                                                      [100%]
+3 passed in 1.39s
+
+Additional audit checks:
+- 8,800 source pipeline rows preserved
+- 2,089 active opportunities scored
+- 0 duplicate opportunity IDs
+- 0 missing catalogue prices after GTXPro/GTX Pro normalization
+- 0 missing sales-team joins
+- Python compilation completed without error

@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-09-21",
+  "dataset": {
+    "pipeline_rows": 8800,
+    "closed_rows": 6711,
+    "active_rows": 2089,
+    "duplicate_opportunity_ids": 0,
+    "missing_sales_price_after_normalization": 0,
+    "missing_sales_team_after_join": 0
+  },
+  "temporal_validation": {
+    "strategy": "oldest 80% train, newest 20% validation by close_date",
+    "validation_rows": 1343,
+    "roc_auc": 0.5002249995135146,
+    "brier_score": 0.2583512131182446,
+    "validation_base_win_rate": 0.6485480268056589,
+    "production_gate_auc": 0.55,
+    "production_mode": "historical_fallback",
+    "decision": "candidate model rejected because out-of-time AUC was below gate"
+  },
+  "active_portfolio": {
+    "minimum_priority_score": 39,
+    "maximum_priority_score": 80,
+    "mean_priority_score": 53.876,
+    "mean_historical_win_estimate": 0.632,
+    "mean_expected_value_usd": 1499.562
+  }
+}
