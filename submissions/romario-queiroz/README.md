@@ -90,7 +90,7 @@ O registro detalhado está em [`process-log/PROCESS.md`](process-log/PROCESS.md)
 
 | Ferramenta | Para que usei |
 |---|---|
-| ChatGPT Codex | Leitura do brief, implementação, testes, documentação e revisão crítica |
+| ChatGPT Codex | Aceleração de exploração, código, testes e revisão, seguindo critérios e decisões definidos por mim |
 | scikit-learn | Modelo candidato e validação temporal |
 | Streamlit + Plotly | Aplicação e visualizações interativas |
 
@@ -103,5 +103,6 @@ O registro detalhado está em [`process-log/PROCESS.md`](process-log/PROCESS.md)
 - [x] [Métricas de validação reproduzíveis](evidence/validation-report.json)
 - [x] [Auditoria de armadilhas e riscos](evidence/AUDIT.md)
 - [x] [Hashes dos dados originais](evidence/data-integrity.sha256)
+- [x] [Captura da pasta de evidências publicada](evidence/screenshots/github-evidence-folder.jpg)
 
 _Submissão preparada em 21/09/2026._
