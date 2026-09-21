@@ -15,11 +15,11 @@ Também defini dois limites: não usar informações conhecidas apenas depois do
 
 ### Iteração 1 — descoberta e desenho
 
-Pedi ao Codex para ler todos os quatro challenges, as regras de submissão e o template. A escolha pelo Challenge 003 ocorreu porque permitia demonstrar análise, julgamento e software utilizável na mesma entrega. A IA ajudou a mapear as tabelas, mas mantive o foco no usuário: a tela inicial deveria ser uma fila de ação, não um dashboard de vaidade.
+Usei o Codex para acelerar a leitura comparativa dos quatro challenges, das regras de submissão e do template. Escolhi o Challenge 003 porque ele permitia demonstrar análise, julgamento e software utilizável na mesma entrega. Mantive o foco no usuário desde o início: a tela principal deveria ser uma fila de ação, não um dashboard de vaidade.
 
 ### Iteração 2 — dados e hipótese de modelo
 
-A IA baixou o dataset público e verificou esquema, cardinalidade, ausências e estágios. A primeira hipótese foi uma regressão logística explicável com atributos disponíveis antes do desfecho. Excluí deliberadamente `close_value`, `close_date` e o resultado do negócio para evitar data leakage.
+Usei a IA para acelerar o download, a leitura do esquema e as verificações de cardinalidade, ausências e estágios. Defini como primeira hipótese uma regressão logística explicável com atributos disponíveis antes do desfecho. Excluí deliberadamente `close_value`, `close_date` e o resultado do negócio para evitar data leakage.
 
 Na auditoria final, uma checagem de cobertura dos joins revelou que o pipeline escrevia `GTXPro`, enquanto o catálogo escrevia `GTX Pro`. Isso retirava silenciosamente o preço de 1.480 linhas. Normalizei a chave antes do join e acrescentei um teste que exige preço e equipe completos em todas as oportunidades.
 
@@ -55,7 +55,7 @@ Todos os três testes passaram.
 
 ## 3. Onde a IA errou e como corrigi
 
-O erro mais importante foi conceitual: a primeira versão transformava automaticamente `predict_proba` em “probabilidade de ganho”, mesmo com AUC praticamente aleatório. Código correto não significa decisão correta. A correção foi criar um gate de qualidade, manter as métricas visíveis e usar fallback conservador.
+O erro mais importante da primeira implementação apoiada pela IA foi conceitual: ela transformava automaticamente `predict_proba` em “probabilidade de ganho”, mesmo com AUC praticamente aleatório. Eu não aceitei essa saída. Código correto não significa decisão correta. Determinei a criação de um gate de qualidade, mantive as métricas visíveis e substituí a previsão por um fallback conservador.
 
 Também evitei três sugestões comuns, mas inadequadas:
 
