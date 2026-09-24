@@ -1,5 +1,9 @@
 # AI Master Challenge
 
+> **Submissão de Romário Delphin:** este é um fork do enunciado original. [Veja o protótipo Lead Focus, testes, evidências e decisões técnicas na branch `submission/romario-queiroz`](https://github.com/RomarioDelphin/ai-master-challenge/tree/submission/romario-queiroz/submissions/romario-queiroz). A validação temporal não sustentou o uso do modelo preditivo; a entrega documenta esse limite e um fluxo alternativo transparente. A solução está na branch indicada, não na árvore `main` abaixo.
+
+---
+
 **O teste para quem vai transformar áreas inteiras usando IA.**
 
 O G4 está construindo um novo tipo de profissional: o **AI Master**. Uma pessoa capaz de entrar em qualquer área — vendas, suporte, marketing, operações — e usar IA generativa para resolver problemas reais de forma transformacional.
